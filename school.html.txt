@@ -1,5 +1,7 @@
 <html>
-<head></head>
+<head>
+	<title>School HTML sample page</title>
+</head>
 <body>
 enter student name:<input type="text" id="t1" name="stdname"><br>
 enter student id:<input type="text" id="t2" name="stdid"><br>
