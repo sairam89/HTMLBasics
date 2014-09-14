@@ -1,0 +1,48 @@
+<html>
+<head></head>
+<body>
+enter student name:<input type="text" id="t1" name="stdname"><br>
+enter student id:<input type="text" id="t2" name="stdid"><br>
+enter student marks:<input type="text" id="t3" name="stdmarks"><br>
+enter student address:<input type="text"  id="t4"name="stdadd"><br>
+<button onclick="filldetails()">Try it</button>
+
+<table id="myTable" border="1px">
+<thead>
+	<tr>
+		<th>
+			Sno
+		</th>
+		<th>
+			StudentId
+		</th>
+		<th>
+			StudentName
+		</th>
+		<th>
+			Marks
+		</th>
+		<th>doughjoe77@hotmail.com
+			Address
+		</th>			
+		<th>
+			Cancel
+		</th>
+	</tr>
+</thead>
+<tbody id="stdentdata">
+
+</tbody>
+</table><br>
+<script>
+function filldetails() {
+   	var rowidx = document.getElementById('myTable').rows.length; 
+	var innerHtml = "<tr><td>"+rowidx+"</td><td>"+document.getElementById('t1').value+"</td><td>"+document.getElementById('t2').value+"</td><td>"+document.getElementById('t3').value+"</td><td>"+document.getElementById('t4').value+"</td><td><input type='button' value='Delete' onClick='del("+rowidx+")'/></td></tr>";
+	document.getElementById("stdentdata").innerHTML += innerHtml;
+}
+function del(index){
+  document.getElementById("myTable").deleteRow(index);  
+}
+</script>
+</body>
+</html>
